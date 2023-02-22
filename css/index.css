@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #000000;
+  background-color: black;
   padding: 0px;
 }
 html {
@@ -8,12 +8,13 @@ html {
 }
 .bg-plane {
   position: absolute;
+  margin-top: -1vh;
+  margin-left: -1vw;
   width: 102vw;
   height: 102vh;
   background-image: url(../assets/bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid #000;
 }
 @media (min-aspect-ratio: 1.77) {
   .bg-plane {
@@ -23,6 +24,16 @@ html {
 @media (max-aspect-ratio: 1.77) {
   .bg-plane {
     background-size: 213vh 120vh;
+  }
+}
+@media (max-aspect-ratio: 1) {
+  .bg-plane {
+    margin-top: 0vh;
+    margin-left: 0vw;
+    width: 100vw;
+    height: 100vh;
+    left: 0px !important;
+    top: 0px !important;
   }
 }
 body {

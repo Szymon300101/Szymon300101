@@ -25,6 +25,10 @@ a:hover {
   color: #c2bfb8;
   opacity: 0.7;
 }
+a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
 .btn {
   border: 0;
   border-radius: 290px;
