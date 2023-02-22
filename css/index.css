@@ -1,0 +1,116 @@
+html,
+body {
+  background-color: #000000;
+  padding: 0px;
+}
+html {
+  overflow: hidden;
+}
+.bg-plane {
+  position: absolute;
+  width: 102vw;
+  height: 102vh;
+  background-image: url(../assets/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000;
+}
+@media (min-aspect-ratio: 1.77) {
+  .bg-plane {
+    background-size: 120vw 67.5vw;
+  }
+}
+@media (max-aspect-ratio: 1.77) {
+  .bg-plane {
+    background-size: 213vh 120vh;
+  }
+}
+body {
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  justify-content: center;
+}
+.box {
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+}
+.name-box {
+  top: 20vh;
+}
+.name-box .name-span {
+  font-size: 3vw;
+  letter-spacing: 1vw;
+  color: #c2bfb8;
+}
+@media (max-aspect-ratio: 1) {
+  .name-box .name-span {
+    font-size: 6vw;
+  }
+}
+.tile-box {
+  top: 55vh;
+}
+.tile-box .tile {
+  display: inline-block;
+  margin: 2vw;
+  width: 20vw;
+  height: 3vw;
+  border-radius: 1vw;
+  font-size: 0.9vw;
+  line-height: 3vw;
+  text-transform: uppercase;
+  padding: 0px;
+  margin-top: 0px;
+}
+.tile-box .tile.tile-lvl-2 {
+  margin-top: 25vh;
+}
+@media (max-aspect-ratio: 1) {
+  .tile-box .tile.tile-lvl-2 {
+    margin-top: 0px;
+  }
+}
+@media (max-aspect-ratio: 1) {
+  .tile-box .tile {
+    margin: 30vw;
+    margin-top: 0vw;
+    margin-bottom: 1vw;
+    width: 40vw;
+    height: 8vw;
+    font-size: 2.5vw;
+    line-height: 8vw;
+  }
+}
+#bottom-box {
+  top: 96vh;
+  transition: top 1s ease;
+}
+#bottom-box .open-btn {
+  height: 4vh;
+  width: 6vh;
+  margin-right: 30vw;
+  margin-left: 30vw;
+  border-radius: 1vh 1vh 0vh 0vh;
+  border-bottom: none;
+  font-size: 2vh;
+}
+#bottom-box #bottom-panel {
+  display: inline-block;
+  height: 25vh;
+  width: 50vw;
+  background-color: rgba(24, 26, 27, 0.5);
+  border: 1px solid #282828;
+}
+#bottom-box.open {
+  top: 71vh;
+}
+#bottom-box .icon-col {
+  font-size: 10vw;
+  color: #c2bfb8;
+}
+#bottom-box .text-col {
+  padding: 1vw;
+  font-size: 2vw;
+  color: #c2bfb8;
+}

@@ -1,0 +1,80 @@
+
+@bg_color_light: #282828;
+@bg_color_dark: #181a1b;
+@text_color: #c2bfb8;
+@btn_color: rgb(133, 169, 185);
+
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+
+html{
+    width: 100%;
+    padding: 10px;
+}
+
+body {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    background-color: @bg_color_light;
+    color: @bg_color_dark;
+    text-align: center;
+}
+
+a {
+    color: @text_color;
+    text-decoration: none;
+    transition: all .35s;
+
+    &:hover{
+    	color: @text_color;
+    	opacity: 0.7;
+    }
+}
+
+.btn {
+    border: 0;
+    border-radius: 290px;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
+
+    &.btn-default {
+	    background-color: rgba(50,50,50,0.3);
+	    border:1px solid @bg_color_light;
+	    color: @btn_color;
+	    transition: all .35s;
+
+	    &:hover {
+	    	opacity: 0.7;
+		}
+	}
+
+    &.btn-primary {
+	    background-color: transparent;
+	    border:1px solid @bg_color_light;
+	    color: @btn_color;
+	    transition: all .35s;
+	    &:hover {
+	    	opacity: 0.7;
+		}
+	}
+
+}
+
+.card {
+  	background-color: @bg_color_dark;
+  	color: @text_color;
+  	border-color: rgba(140, 130, 115, 0.13);
+	margin:8px;
+	display:inline-block;
+	text-align: left;
+
+	p {
+	    font-size: 17px;
+	    line-height: 1.7;
+	    margin-bottom: 20px;
+	}
+
+	.block-href .card-text{
+	    height: 110px;
+	    margin-bottom: 10px;
+	}
+}

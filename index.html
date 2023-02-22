@@ -5,117 +5,63 @@
     <title>Szymon Nowacki</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
 
-    <a href="https://szymon300101.github.io/Photography/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/photography.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Fotografia</h5>
-            <p class="card-text">
-                Strona na której umieszczam swoje zdjęcia. 
-            </p>
-            <a href="https://szymon300101.github.io/Photography/" class="btn btn-primary">Photography</a>
-          </div>
-        </div>
-    </a>
+      <div class="bg-plane"></div>
 
-    <a href="https://szymon300101.github.io/CHAOS/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/CHAOS.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">CHAOS</h5>
-            <p class="card-text">Interaktwna symulacja gry w chaos generujaca figury pokrewne do trójkąta Sierpińkiego
-            </p>
-            <a href="https://szymon300101.github.io/CHAOS/" class="btn btn-primary">Aplikacja</a>
-            <a href="https://github.com/Szymon300101/CHAOS" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-    </a>
+    <div class="box name-box">
+      <span class="name-span">
+        SZYMON NOWACKI
+      </span>
+    </div>
 
-    <a href="https://szymon300101.github.io/TableFlow/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/TableFlow.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">TableFlow</h5>
-            <p class="card-text">Interaktywna aplikacja generująca animacje w oparciu o kardioidy, tabliczkę mnożenia i nie tylko.
-            </p>
-            <a href="https://szymon300101.github.io/TableFlow/" class="btn btn-primary">Aplikacja</a>
-            <a href="https://github.com/Szymon300101/TableFlow" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-    </a>
+    <div class="box tile-box">
+      <a type="button" class="btn btn-default tile tile-lvl-1" href="https://szymon300101.github.io/Photography/">
+        Fotografia
+      </button>
+      <a type="button" class="btn btn-default tile tile-lvl-2" href="./pages/genart.html">
+        Aplikacje graficzne
+      </a>
+      <a type="button" class="btn btn-default tile tile-lvl-2 disabled">
+        Elektronika i modelarstwo
+      </a>
+      <a type="button" class="btn btn-default tile tile-lvl-1 disabled">
+        Grafika komputerowa
+      </a>
+    </div>
 
-    <a href="https://szymon300101.github.io/TW1S7/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/TW1S7.PNG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">TW1S7</h5>
-            <p class="card-text">Coś jakby wygaszacz ekranu oparty o równania parametryczne.
-            </p>
-            <a href="https://szymon300101.github.io/TW1S7/" class="btn btn-primary">Animacja</a>
-            <a href="https://github.com/Szymon300101/TW1S7" class="btn btn-primary">GitHub</a>
+    <div id="bottom-box" class="box closed" onmouseleave="close_bottom_panel()">
+      <button class="btn btn-default open-btn" onmouseenter="open_bottom_panel()"><i class="bi bi-chevron-double-up"></i></button>
+      <div id="bottom-panel">
+        <div class="row">
+          <div class="col-md-4 icon-col">
+            <a href="https://www.instagram.com/szymon300101/">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+          <div class="col-md-4 icon-col">
+            <a href="https://github.com/Szymon300101">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <div class="col-md-4 text-col">
+            <a href="./files/CV_2022_pl.pdf">
+              <i class="bi bi-file-earmark-person"></i> CV
+            </a>
           </div>
         </div>
-    </a>
-
-    <a href="https://szymon300101.github.io/H3Xes/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/H3Xes.PNG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">H3Xes</h5>
-            <p class="card-text">Generator ładnych losowych tapet.
-            </p>
-            <a href="https://szymon300101.github.io/H3Xes/" class="btn btn-primary">Animacja</a>
-            <a href="https://github.com/Szymon300101/H3Xes" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-    </a>
-
-    <a href="https://szymon300101.github.io/RainbowSORT/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/RainbowSORT.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">RainbowSORT</h5>
-            <p class="card-text">Prosta aplikacja porównująca wydajność algorytmów sortowania (Quick Sort i Bubble Sort).
-            </p>
-            <a href="https://szymon300101.github.io/RainbowSORT/" class="btn btn-primary">Animacja</a>
-            <a href="https://github.com/Szymon300101/RainbowSORT" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-    </a>
-
-    <a href="https://szymon300101.github.io/histoDICE/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/histoDICE.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">histoDICE</h5>
-            <p class="card-text">Narzędzie do symulowania rzutów kostką w systemie Wolsung.
-            </p>
-            <a href="https://szymon300101.github.io/histoDICE/" class="btn btn-primary">Aplikacja</a>
-            <a href="https://github.com/Szymon300101/histoDICE" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-    </a>
-
-    <a href="https://szymon300101.github.io/ASTRO2/" class="block-href">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/ASTRO2.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">ASTRO2</h5>
-            <p class="card-text">Prosty symulator układu slonecznego oparty na siłach grawitacji.
-            </p>
-            <a href="https://szymon300101.github.io/ASTRO2/" class="btn btn-primary">Aplikacja</a>
-            <a href="https://github.com/Szymon300101/ASTRO2" class="btn btn-primary">GitHub</a>
-          </div>
-        </div>
-    </a>
+      </div>
+    </div>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="./js/dynamic-bg.js"></script>
+    <script src="./js/bottom-panel-anim.js"></script>
   </body>
 </html>
