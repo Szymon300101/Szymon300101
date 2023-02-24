@@ -13,6 +13,7 @@ html{
 
 body {
     width: 100%;
+    min-height: 90vh;
     padding: 10px;
     font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
     background-color: @bg_color_light;
@@ -63,22 +64,12 @@ a {
 
 }
 
-.card {
-  	background-color: @bg_color_dark;
-  	color: @text_color;
-  	border-color: rgba(140, 130, 115, 0.13);
-	margin:8px;
-	display:inline-block;
+.left{
 	text-align: left;
-
-	p {
-	    font-size: 17px;
-	    line-height: 1.7;
-	    margin-bottom: 20px;
-	}
-
-	.block-href .card-text{
-	    height: 110px;
-	    margin-bottom: 10px;
-	}
+}
+.right{
+	text-align: right;
+}
+.capital{
+    text-transform: uppercase;
 }

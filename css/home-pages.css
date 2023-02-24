@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  color: #c2bfb8;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.card {
+  background-color: #181a1b;
+  color: #c2bfb8;
+  border-color: rgba(140, 130, 115, 0.13);
+  margin: 8px;
+  display: inline-block;
+  text-align: left;
+}
+.card p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.card .block-href .card-text {
+  height: 110px;
+  margin-bottom: 10px;
+}

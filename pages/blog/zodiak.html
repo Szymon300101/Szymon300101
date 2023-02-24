@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Szymon Nowacki | Zodiak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog-subpages.css" />
+  </head>
+  <body>
+
+    <div class="navbar row" id="navbar">
+      <div class="col-md left">
+        <a href="../blog_home.html"><i class="bi bi-chevron-double-left"></i> Powrót</a>
+      </div>
+      <div class="col-md right">
+        <h2>ZODIAK</h1>
+      </div>
+    </div>
+
+    <div id="zoom-bg" class="hidden" onclick="unzoom()">
+      <i class="bi bi-x-lg zoom-x"></i>
+    </div>
+
+    <div class="text">
+
+      <h1 class="title">ZODIAK</h1>
+
+      <img onclick="zoom(this)" src="../../assets/blog/zodiak/IMG_20230105_133610.jpg" class="vertical big">
+
+      <p>
+        “Zodiak” jest małym, zdalnie sterowanym modelem pontonu motorowego, zbudowanym w ciągu ferii świątecznych pod koniec 2022 roku. Projekt ten powstał, ponieważ od dawna chciałem zbudować zdalnie sterowaną łódkę, a jako że nigdy łódek nie budowałem, postanowiłem zacząć od czegoś małego i prostego. Podczas składania „Zodiaka” głównie chciałem nauczyć się kłaść włókno szklane (czego wcześniej nie robiłem), ale też poznać wszystkie rzeczy, jakie mogą nie wyjść, gdy ktoś bez doświadczenia projektuje łódkę. Pomysł był dość spontaniczny, więc ostatecznie całość złożyłem z komponentów, które już miałem.
+      </p>
+
+      <h3>Konstrukcja kadłuba</h3>
+
+      <p>
+        Kadłub zaprojektowałem czerpiąc inspirację z łódek motorowych typu Zodiac, których płaski i szeroki kształt uznałem za bardzo bezpieczny i stabilny dla pojazdu, który nie musi być szybki (celem było żeby po prostu pływał). Następnie został on wydrukowany z PLA (brak wypełnienia, cienkie ścianki), oraz zalaminowany włóknem szklanym, które akurat miałem pod ręką (nie wiem jakiej było grubości). Całość została wyszlifowana i pomalowana na biało w nawiązaniu do oryginalnych Zodiaków. 
+      </p>
+
+      <div class="img-group">
+        <img src="../../assets/blog/zodiak/IMG_20221222_203550.jpg" class="horizontal">
+        <img src="../../assets/blog/zodiak/IMG_20221225_173630.jpg" class="vertical">
+      <div class="img-group">
+      </div>
+        <img src="../../assets/blog/zodiak/IMG_20221227_172133.jpg" class="vertical">
+        <img src="../../assets/blog/zodiak/IMG_20230104_202626.jpg" class="horizontal">
+      </div>
+
+      <p>
+        Dostęp do elektroniki zapewnia dokręcana śrubami klapka. Jej połączenie z kadłubem zostało uszczelnione silikonem.
+      </p>
+
+      <p>
+        Silniki umieszczone są na kolumienkach, żeby lepiej zasysały wodę spod łódki. Dodatkowo nad wirnikami domontowałem osłony, które zapobiegają wciąganiu powietrza po rufie. Bez tego silniki chodziły praktycznie w powietrzu i łódka prawie nie pływała.
+      </p>
+
+      <img src="../../assets/blog/zodiak/IMG_20230223_211312.jpg" class="horizontal">
+
+      <h3>Elektronika</h3>
+
+      <p>
+        Schemat funkcjonalny elektroniki modelu:
+      </p>
+
+      <img src="../../assets/blog/zodiak/Zodiac.png" class="horizontal">
+
+      <p>
+        <b>Bateria</b> – Li-Po 1S (3.7V), ~560mAh. Malutki akumulator, jednak jeszcze nie udało mi się go rozładować. Do tego rozmiaru silników jest idealna.
+      </p>
+      <p>
+        <b>Odbiornik</b> – FlySky RX2A Pro. Wersja mini odbiornika do aparatur FlySky. W moim przypadku przekazuje sygnał radiowy po IBus do Arduino.
+      </p>
+      <p>
+        <b>Arduino</b> – Arduino Pro Mini 3.3V. Służy tylko jako konwerter sygnału z IBus na sygnały PWM (Pulse Width Modulation) dla sterownika silników. Przy okazji miksuje kanały. Bez problemu toleruje 4V z baterii, więc nie trzeba dodatkowej przetwornicy.
+      </p>
+      <p>
+        <b>Sterownik silników</b> – jakiś Chiński sterownik na mostku H.
+      </p>
+      <p>
+        <b>Silniki</b> – szczotkowe 6mm średnicy, wymontowane z micro drona. Są trochę za małe do tej aplikacji, silnikach. Łódka pływa całkiem dobrze, to się liczy.
+      </p>
+
+      <img src="../../assets/blog/zodiak/IMG_20230223_202905.jpg" class="horizontal">
+
+    </div>
+
+    
+
+
+
+    <script src="../../js/sticky-navbar.js"></script>
+    <script src="../../js/img-zoom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
