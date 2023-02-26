@@ -63,3 +63,6 @@ a:focus {
 .capital {
   text-transform: uppercase;
 }
+.hidden {
+  display: none;
+}

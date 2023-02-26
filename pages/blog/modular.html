@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Szymon Nowacki | Modular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog-subpages.css" />
+  </head>
+  <body>
+
+    <div class="navbar row" id="navbar">
+      <div class="col-md left">
+        <a href="../blog_home.html"><i class="bi bi-chevron-double-left"></i> Powrót</a>
+      </div>
+      <div class="col-md left hidden" id="up-arrow">
+        <a href="#"><i class="bi bi-chevron-double-up"></i> Na górę</a>
+      </div>
+      <div class="col-md right">
+        <h2>MODULAR</h1>
+      </div>
+    </div>
+
+    <div id="zoom-bg" class="hidden">
+      <i class="bi bi-x-lg zoom-x"></i>
+    </div>
+
+    <div class="text">
+
+      <h1 class="title">MODULAR</h1>
+      <span class="subtitle">Analogowy syntezator modularny w formacie Kosmo</span>
+
+      <img src="../../assets/blog/modular/icon.jpg" class="vertical big">
+
+      <!-- <div class="video-wrapper">
+          <div class="video-frame">
+              <iframe width="1280" height="720" src="https://www.youtube.com/embed/RLJmIb9pOV8" title="Zodiak lake test" frameborder="0" allowfullscreen></iframe>
+          </div>
+      </div> -->
+
+      <br>
+
+      <p>
+        Na start, <b>co to jest syntezator modularny?</b><br>
+        Syntezator modularny to instrument muzyczny, który umożliwia tworzenie dźwięków poprzez łączenie różnych modułów elektronicznych. Moduły te wykonują różne funkcje, takie jak generowanie fal dźwiękowych, modyfikowanie ich kształtu, kontrolowanie głośności, itp. <br>
+        Syntezatory modularne pozwalają użytkownikom na tworzenie niestandardowych i unikalnych dźwięków poprzez łączenie różnych modułów w różnych konfiguracjach. Użytkownik może również zmieniać ustawienia modułów w czasie rzeczywistym, co pozwala na interaktywne eksperymentowanie z dźwiękami.
+      </p>
+
+      <p>
+        <b>Dlaczego rozpocząłem ten projekt?</b><br>
+        Odpowiedź jest bardzo prosta - na początku 2021 roku naoglądałem się przygód Sama z  <a href="https://www.youtube.com/watch?v=1gs4wNvbStw&list=PLluPQLh1xzlJyQvAKDw7MwcfUMEoUzezE&index=6">LMNC</a>, i strasznie chciałem mieć taką maszynę jak on.
+      </p>
+
+      <p>
+        <b>Nieco więcej o motywacji i założeniach:</b><br>
+        Rozpoczynając ten projekt wiedziałem dobrze jakim ogromem pracy jest stworzenie syntezatora wielkości tego od LMNC i miałem świadomość że nie warto bez doświadczenia porywać się na takie zadanie. Nie byłem AŻ TAK zdeterminowany, żeby poświęcić na to parę następnych lat życia. Moim celem było zobaczyć jak mi się będzie budować tego typu urządzenia i czy dźwięki jakie z nich wyciągnę, będą mnie motywować do dalszej pracy. Na początek postanowiłem stworzyć jeden moduł, potem następny i następny. Był to w zasadzie projekt bez celu - albo raczej to droga była celem. Dlaczego? Bo nigdy nie grałem na żadnym instrumencie i nie spodziewałem się, że jak już zbuduję swój syntezator, będę w stanie na nim grać. Wiedziałem jednak że budując go będę się dobrze bawił i nauczę się bardzo wiele o elektronice analogowej, z którą w dzisiejszych czasach ciężko się spotkać. A może jak już będę miał instrument to nauczę się na nim grać?
+      </p>
+
+      <p>
+        <b>Jak wyszło?</b><br>
+        Gra! Aktualnie projekt zatrzymałem na etapie, gdzie osiągnąłem kompletny, muzykalny instrument. Ma 6 modułów, które wystarczają by po podpięciu do keyboardu konstrukcja służyła za monofoniczny syntyzator z przyjemną gamą dziwnych efektów dźwiękowych. Z definicji syntezator modularny nie jest nigdy skończony, ponieważ zawsze można dokładać kolejne moduły, jednak kiedyś trzeba przerwać i zająć się innymi rzeczami. Mimo to planuje w przyszłości dokładać kolejne moduły, na które już mam pomysły. Jak wyszły konkretne moduły - co działa a co nie całkiem opiszę w kolejnych rozdziałach.
+      </p>
+
+      <p>
+        <b>Mój zmieniony format Kosmo</b><br>
+        Jako punkt wyjściowy jeśli chodzi o ustalanie standardowego wyglądu moich modułów przyjąłem <a href="https://www.lookmumnocomputer.com/modular">format Kosmo</a>, jednak trochę go pozmieniałem.
+        <ul>
+          <li>Wysokość modułu: 20cm</li>
+          <li>Szerokość modułu: wielokrotność 5cm</li>
+          <li>Złącze: mini jack (obecnie łatwiej dostępne niż duże jack'i w Kosmo)</li>
+          <li>Wygląd: czarny panel, srebrne ręcznie rysowane opisy</li>
+          <li>Panel: spionione PCV (tanie i łatwe w obróbce), od tyłu usztywnione profilami aluminiowymi</li>
+          <li>Napięcia zasilania: -12V, GND, +5V, +12V</li>
+          <li>Napięcie CV: 0 - 5V</li>
+          <li>Napięcie sygnału: 10Vpp (-5V - +5V)</li>
+        </ul>
+      </p>
+
+      <ol id="table-of-contents"></ol>
+
+      <h3>Pierwsze kroki
+        <span class="date">04.2021</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Pierwszym co zbudowałem w ramach tego projektu był Super Simple Oscilator. Jest to oscylator, złożony z jednego tranzystora, kondensatora i paru rezystorów. Produkuje bliżej nieokreśloną falę, która brzmi... jakoś.
+          </p>
+          <p>
+             Mimo wątpliwych właściwości muzycznych, stworzenie czegoś co robi chałas było bardzo satysfakcjonujące. Ten układ nie był przeznaczony jako moduł do ostatecznego instrumentu - w Modularze wylądował inny (wiele lepszy) oscylator.
+          </p>
+          <p>
+           Na płytce umieściłem 2 takie układy, jak i filtr dolnoprzepustowy i regulację głośności. Do kompletu, na szybko złożełem prosty sequencer oparty na Arduino, żeby dało się zagrać jakąś melodyjkę. Efekt widać na filmiku. Jako że ten oscylator to nie jest VCO, żeby kontrolować go sequencerem, musiałem wykożystać diodę i fotorezystor, który zastąpił normalnie regulujący ton potencjometr.
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230225_174815.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20210423_231254.jpg" class="horizontal">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/SUPER+SIMPLE+OSCILLATOR+SCHEMATIC.png" class="vertical">
+          <div class="video-wrapper">
+            <div class="video-frame">
+              <iframe width="1280" height="720" src="https://www.youtube.com/embed/ikYuFve5kCA" title="Modular - Super Simple Oscilator" frameborder="0"  allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Sequencer
+        <span class="date">05.2021</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Pierwszym modułem, który miał znaleźć się na ostatecznym Modularze był sequencer. Konstruckja ta też była inspirowana  <a href="https://www.youtube.com/watch?v=9oGlCfwCoCw">projektem LMNC</a>, jednak uprościłem oryginalny projekt, jako że nie potrzebowałem wszystkich jego funkcji.
+          </p>
+          <p>
+            8 potencometrów zadaje wartości napięcia wyjściowego każedgo z 8 kroków sekwencji, a Arduino przełącza kolejno między nimi. Za pomocą przełącznika trybów (w prawym górnym rogu panelu) można zmieniać kierunek kroków i zatrzymywać ich zmianę. Pozostałe pozycje przełącznika na razie nie są wykożystane. Enkoder w lewym górnym rogu pozwala ręcznie zmieniać kroki, a jego wciśnięcie chwiowo zatrzymuje sekwencję. Na dole znajduje się pokrętło szybkości zegara jak i opcjonalne wejście do synchronizacji z sygnałem zewnętrznym.
+          </p>
+          <p>
+            Dla tego modułu pierwszy raz robiłem panel. Opiszę tutaj ten proces, jako że dla wszystkich kolejnych modułów był on zasadniczo taki sam. Najpierw rozkład elementów na panelu jak i szkic opisów zrobiłem na kartce (w pełnej skali). Następnie wszystkie opisy (dotychczas ołówkiem, bez grubości) pogrubiłem markerem, aby nadać liniom stałą szerokość. Później nakleiłem taśmą dwustronną tą kartkę na płytę spienionego PCV i wyciąłem kształt modułu. Opisy wyciąłem nożem w papierze po zewnętrznym obrysie markera, by odsłonic plastik. Następnie wywierciłem wszystkie otwory na potencjometry i złącza. Na całosć naniosłem 3 warstwy sprayu: biały podkład, czarny matowy i srebrny. Podkład zapewnia dobrą przyczepność farby a czarny (powinien byc błeszczący najlepiej) sprawia że srebrny na nim bardziej błyszczy. Później można zdjać papier i zacząć montować potencjometry. Późniejsze moduły od tyłu dodatkowo usztywniałem, ale ten akurat jest na tyle szeroki, że plastik się nie wygina. 
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20210505_124807.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20210505_190451.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20210506_143432.jpg" class="vertical">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20210505_173418.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20210505_191016.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20230225_200609.jpg" class="vertical">
+          <div class="video-wrapper">
+            <div class="video-frame">
+              <iframe width="533" height="947" src="https://www.youtube.com/embed/05tB4bZCk8E" title="Modular - Sequencer" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Zasilacz
+        <span class="date">05.2021</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Zaraz po ukończeniu sequencera zabrałem się za układ, który był niezbędny do dalszej pracy, czyli zasilacz dualny. Jest wiele sposobów na budowę tego typu układów, ja zdecydowałem się na taki, który bazuje na stabilnym zasilaniu DC z którego generuje parę napięć +12V, -12V. Oszczędziło mi to operowania na 230V oraz wysoce prawdopodobnej śmierci. 
+          </p>
+          <p>
+            Głównym wyzwaniem przy projektowaniu dualnego zasilacza jest jego ujemna część, jako że dodatnie napięcie można uzyskać z dowolnego regulatora zakupionego w sklepie. Miałem takie niebieskie płytki oparte o regulator LM2596 (które regulowały dodatnie napięcie) i to ich planowałem użyć do dodatniej strony zasilacza. Ujemne napięcie chciałem uzyskać z tego samego chipa, tylko z inną płytką go otaczającą. Początkowo, planowałem stworzyć układ otaczający ten regulator samemu, w oparciu o schemat zapewniony przez producenta samego chipa, jednak coś mi nie działało (dalej nie wiem co). Wtedy zauważyłem, że podpinając "bokiem" niebieską płytkę (zwykłą dodatnią), uzyskuje się identyczny układ do tego, który próbowałem zbudować i powstaje ujemne napięcie. Schemat umieściłem na zdięciu obok. 
+          </p>
+        </div>
+        <div class="col col-12 col-lg-4">
+          <img src="../../assets/blog/modular/lm2596.png" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20210520_155556.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20210524_161747.jpg" class="horizontal">
+        </div>
+      </div>
+
+      <h3>VCO (Voltage Controlled Oscylator)
+        <span class="date">06.2021</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            VCO jest kluczowym elementem każdego syntezatora. Pozwala generować falę o zadanej częstotliwości, która następnie może być przetważana przez pozostałe moduły urządzenia. Wybrany przeze mnie rodzaj oscylatora może generować falę piłokrztałtną lub prostokątną zależnie od ustawienia. Budowa tego układu była moim pierwszym większym spotkaniem z elektroniką analogową jak i lutowaniem obwodów na płytkach stripboard. Układu nie wymyśliłem samemu, a praktycznie bez zmian wykorzystałem świetny <a href="https://www.youtube.com/watch?v=OCAb2UoSPs0">projekt VCO Moritza Kleina</a>.
+          </p>
+          <p>
+            Układ jest oparty na przerzutniku Schmitta, który stanowi bazę oscylatora astabilnego. Nie będę się tutaj zagłębiał w szczegóły, bo Moritz Klein tłumaczy działanie całego układu o wiele lepiej niż ja bym umiał. Wprowadziłem do układu drobne zmiany wynikające z komponentów jakie miałem, plus uznałem, że nie potrzebuję wejścia PWM, więc je też pominąłem. Schemat obok jest już zmodyfikowanym przeze mnie układem. Na płytce stripboard umieściłem 2 identyczne układy. Layout jest całkowicie mój, jako że chciałem go dobrze rozumieć żeby wykryć ewentualne błędy. Tak samo postępowałem w kolejnych modułach - nawet jeżeli wykożystywałem czyiś schemat, rozkład na płytce robiłem samemu. 
+          </p>
+          <p>
+            Brzmienie modułu można usłyszeć na filmiku przy sequencerze (jak i wszystkich późniejszych). Oscylator gra super, po wyregulowaniu potencjometrów strojących V/oct, trzyma strój stosunkowo dobrze i można na nim grać keyboardem. Problematyczne były tylko potencjometry na panelu. Te których używałem na początku (widać je na zdjęciach) w losowych momentach zaczynały się psuć - ich piny zaczynały się rozłączać co powodowało skoki i zmiany napięcia zadającego ton oscylatora. Jest to problem ze wszytkimi tego typu potencjometrami (z metalową obudową) i ostatecznie stopniowo musiałem je wymieniać na inne (takie zielone - są widoczne w późniejszych modułach).
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/vco.png" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20210611_190953.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20210701_121622.jpg" class="horizontal">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230226_122228.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20210625_205428.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20210701_121607.jpg" class="horizontal">
+        </div>
+      </div>
+
+      <h3>VCF (Voltage Controlled Filter)
+        <span class="date">07.2021</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Filtr jest najprostszym sposobem na przetwarzanie dźwięku w syntezatorze. Najczęsciej wykożystywany jest filtr dolnoprzepustowy, który wygładza dźwięk wychodzący z oscylatora obcinając wysokie częstotliwości. Filtr który tutaj zaimplementowałem pierwotnie pochodzi z ikonicznego syntezatora Korg MS20 i jest bardzo popularną konstrukcją. Ma on funkcję filtra górnoprzepustowego, dolnoprzepustowego a także kontrolę rezonansu, która pozwala uzyskać interesujące tony. Konkretna wersja układu którą wykożystałem pochodzi od <a href="https://www.schmitzbits.de/ms20.html">Réne Schmitz'a</a>, który wprowadził parę zmian unowocześniających ikoniczny filtr.
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230226_131552.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20211020_123034.jpg" class="vertical">
+          <div class="video-wrapper">
+            <div class="video-frame"><iframe width="1280" height="720" src="https://www.youtube.com/embed/N6W4IKcANtE" title="Modular - VCF" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230226_122500.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20211020_123024.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20211020_210854.jpg" class="vertical">
+        </div>
+      </div>
+
+      <h3>Obudowa
+        <span class="date">10.2021</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Obudowę syntezatora zrobiłem w zasadzie ze śmieci. Było to dosyć celowe - chciałem żeby całość miała garażowy, niedoskonały wygląd. Konstrukcja powstała z pociętego blatu starego stołu od babci, a tył jest górną okleiną ikonicznego stołu Ikea LACK (został znaleziony na śmietniku). Całosć została pomalowana czarnym matowym sprayem. Moduły są przykręcane do obudowy śrubami do drewna, wkręcanymi bezpośrednio w przednie deseczki. Obudowa dodatkowo wyposażona jest w świecący wyłącznik i gniazdo DC 5.5x2.1mm.
+          </p>
+          <p>
+            Wymiary wewnętrzne obudowy to 45.5cm x 40.7cm x 9.4cm, co pozwala umieścić w niej 2 rzędy dwa rzędy modułów, 7 x 5cm segment w każdym.
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20211113_201811.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20211114_162917.jpg" class="vertical">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20211114_151356.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20211114_162927.jpg" class="vertical">  
+        </div>
+      </div>
+
+      <h3>Mixer + Tuner + VCA (Voltage Controlled Amplifier)
+        <span class="date">02.2022</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Jak sama nazwa wskazuje, wiele się dzieje za panelem tego modułu. Ma on 3 główne funkcje:
+            <ul>
+              <li>
+                <b>Tuner</b> - 8-segmentowy wyświetlacz pokazuje nutę, jaka odpowiada częstotliwości aktualnie wychodzącej z modułu, a dwie diody wskazują, w którą stronę należy skorygować ton by trafić w najbliższą poprawną nutę. 
+              </li>
+              <li>
+                <b>Mixer</b> - 4 kanały wejściowe są miksowane w jeden sygnał wyjściowy, co pozwala uzyskać jedno wyjście z wielu ścieżek, którymi podąża dźwięk w syntezatorze.
+              </li>
+              <li>
+                <b>VCA</b> - Wzmocnienie 2 dolnych kanałów mixera można sterować napięciem. Pozwala to na przykład przycinać sygnał wyjściowy modułem ADSR (opisanym dalej).
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            Jest to pierwszy z modułow, który został w znacznej części zaprojektowany przeze mnie. Jako VCA wykorzystałem układ <a href="https://electricdruid.net/design-a-eurorack-vintage-vca-with-the-lm13700/">Electricdruida</a>, który przerobiłem żeby pasował do reszty. Resztą jest prosty mixer inspirowany <a href="https://www.lookmumnocomputer.com/mixer">mixerem LMNC</a> i tuner oparty na Arduino Nano, inspirowany <a href="https://www.lookmumnocomputer.com/1222-performance-vco">Performance VCO od LMNC</a>.
+          </p>
+          <p>
+            Najbardziej interesującym elmentem modułu moim zdaniem jest tuner. LMNC swój umieścił w VCO, jednak ja nie chciałem tego robić, ponieważ jeżeli rozszerzałbym syntezator o więcej oscylatorów, nie potrzebowałbym tunera przy każdym. Mimo że czasem jest to przydatna funkcja, wymaga to dużej ilości dodatkowej elektroniki. Postanowiłem więc umieścić tuner w mixerze - dzięki temu można nastroić każdy oscylator, wyciszając na chwilę wszystkie pozostałe. Jako że filtry ani wzmacniacze nie zmieniają bazowej częstotliwości, można stroić nawet oscylator z efektami. <br>
+            Arduino mierzy częstotliwość sygnału i porównuje go z tabelą wszystkich częstotliwości nut. Na tej podstawie wyświetla informacje na wyświetlaczu i diodach. Kod Arduino to tunera znajduje się <a href="https://github.com/Szymon300101/TUN3R">tutaj</a>. <br>
+            Jeśli chodzi o podłączenie Arduino do wyświetlacza, to tak się składa że da się to tak przylutować, żeby były one po przeciwnych stronach płytki i stykały się pinami. Ucinając niektóre piny, do się sprytnie uniknąć ciągnięcia dużej ilości kabli. Niestety Arduino, którego uzywałem miało spalone parę pinów, więc musiałem trochę pokombinować żeby je zastąpić i w efekcie jest trochę nieładnych przewodów.
+          </p>
+          <p>
+            Jak można zauważyć na zdjęcu, moduł nie jest całkiem skończony. Brakuje gniazda jack w pierwszym kanale, bo kiedy go budowałem skończyły mi się. Od tego czasu nigdy nie miałem potrzeby korzystać z 4 kanałów na raz, więc ciągle go nie zainstalowałem. cała reszta tego kanału jest, brakuje tylko gniazda. Planowałem też dodać przycisk do tunera (do zmiany trybów czy coś), ale nie miałem na razie potrzeby, więc została dziura pod wyświetlaczem.
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/Schematic_Mixer_2023-02-26.png" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20220215_152932.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20220210_220242.jpg" class="horizontal">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230226_122426.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20220212_124620.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20230226_165628.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20230226_165731.jpg" class="horizontal">
+        </div>
+      </div>
+
+
+      
+
+
+    </div>
+
+    
+
+
+
+    <script src="../../js/table-of-contents.js"></script>
+    <script src="../../js/sticky-navbar.js"></script>
+    <script src="../../js/img-zoom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
