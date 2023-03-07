@@ -58,14 +58,22 @@ body {
 .navbar.sticky #up-arrow {
   display: block;
 }
-#table-of-contents {
-  text-align: left;
-  list-style: decimal inside;
+#toc-wrapper {
+  text-align: center;
+  margin: 20px;
 }
-#table-of-contents:before {
+#toc-wrapper #table-of-contents {
+  text-align: center;
+  list-style: decimal inside;
+  display: inline-block;
+  border-top: 1px solid #c2bfb8;
+  border-bottom: 1px solid #c2bfb8;
+  padding: 8px;
+}
+#toc-wrapper #table-of-contents:before {
   content: "Spis treści:";
 }
-#table-of-contents a {
+#toc-wrapper #table-of-contents a {
   display: list-item;
   text-align: left;
 }
@@ -146,7 +154,6 @@ img.big {
 }
 .video-wrapper {
   width: 100%;
-  max-width: 600px;
   height: 100%;
   margin: 0 auto;
   background: #CCC;

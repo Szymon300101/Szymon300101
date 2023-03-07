@@ -35,11 +35,11 @@
 
       <img src="../../assets/blog/modular/icon.jpg" class="vertical big">
 
-      <!-- <div class="video-wrapper">
+      <div class="video-wrapper big">
           <div class="video-frame">
-              <iframe width="1280" height="720" src="https://www.youtube.com/embed/RLJmIb9pOV8" title="Zodiak lake test" frameborder="0" allowfullscreen></iframe>
+              <iframe width="1903" height="906" src="https://www.youtube.com/embed/hp1y6TSAdoE" title="LMNC - Ride (Lead Cover)" frameborder="0" allowfullscreen></iframe>
           </div>
-      </div> -->
+      </div>
 
       <br>
 
@@ -61,7 +61,7 @@
 
       <p>
         <b>Jak wyszło?</b><br>
-        Gra! Aktualnie projekt zatrzymałem na etapie, gdzie osiągnąłem kompletny, muzykalny instrument. Ma 6 modułów, które wystarczają by po podpięciu do keyboardu konstrukcja służyła za monofoniczny syntyzator z przyjemną gamą dziwnych efektów dźwiękowych. Z definicji syntezator modularny nie jest nigdy skończony, ponieważ zawsze można dokładać kolejne moduły, jednak kiedyś trzeba przerwać i zająć się innymi rzeczami. Mimo to planuje w przyszłości dokładać kolejne moduły, na które już mam pomysły. Jak wyszły konkretne moduły - co działa a co nie całkiem opiszę w kolejnych rozdziałach.
+        Gra! Aktualnie projekt zatrzymałem na etapie, gdzie osiągnąłem kompletny, muzykalny instrument. Ma 6 modułów, które wystarczają by po podpięciu do keyboardu konstrukcja służyła za monofoniczny syntezator z przyjemną gamą dziwnych efektów dźwiękowych. Z definicji syntezator modularny nie jest nigdy skończony, ponieważ zawsze można dokładać kolejne moduły, jednak kiedyś trzeba przerwać i zająć się innymi rzeczami. Mimo to planuje w przyszłości dokładać kolejne moduły, na które już mam pomysły. Jak wyszły konkretne moduły - co działa a co nie całkiem opiszę w kolejnych rozdziałach.
       </p>
 
       <p>
@@ -72,14 +72,16 @@
           <li>Szerokość modułu: wielokrotność 5cm</li>
           <li>Złącze: mini jack (obecnie łatwiej dostępne niż duże jack'i w Kosmo)</li>
           <li>Wygląd: czarny panel, srebrne ręcznie rysowane opisy</li>
-          <li>Panel: spionione PCV (tanie i łatwe w obróbce), od tyłu usztywnione profilami aluminiowymi</li>
+          <li>Panel: spienione PCV (tanie i łatwe w obróbce), od tyłu usztywnione profilami aluminiowymi</li>
           <li>Napięcia zasilania: -12V, GND, +5V, +12V</li>
           <li>Napięcie CV: 0 - 5V</li>
           <li>Napięcie sygnału: 10Vpp (-5V - +5V)</li>
         </ul>
       </p>
-
-      <ol id="table-of-contents"></ol>
+      
+      <div id="toc-wrapper">
+        <ol id="table-of-contents"></ol>
+      </div>
 
       <h3>Pierwsze kroki
         <span class="date">04.2021</span>
@@ -91,10 +93,10 @@
             Pierwszym co zbudowałem w ramach tego projektu był Super Simple Oscilator. Jest to oscylator, złożony z jednego tranzystora, kondensatora i paru rezystorów. Produkuje bliżej nieokreśloną falę, która brzmi... jakoś.
           </p>
           <p>
-             Mimo wątpliwych właściwości muzycznych, stworzenie czegoś co robi chałas było bardzo satysfakcjonujące. Ten układ nie był przeznaczony jako moduł do ostatecznego instrumentu - w Modularze wylądował inny (wiele lepszy) oscylator.
+             Mimo wątpliwych właściwości muzycznych, stworzenie czegoś co robi hałas było bardzo satysfakcjonujące. Ten układ nie był przeznaczony jako moduł do ostatecznego instrumentu - w Modularze wylądował inny (wiele lepszy) oscylator.
           </p>
           <p>
-           Na płytce umieściłem 2 takie układy, jak i filtr dolnoprzepustowy i regulację głośności. Do kompletu, na szybko złożełem prosty sequencer oparty na Arduino, żeby dało się zagrać jakąś melodyjkę. Efekt widać na filmiku. Jako że ten oscylator to nie jest VCO, żeby kontrolować go sequencerem, musiałem wykożystać diodę i fotorezystor, który zastąpił normalnie regulujący ton potencjometr.
+           Na płytce umieściłem 2 takie układy, jak i filtr dolnoprzepustowy i regulację głośności. Do kompletu, na szybko złożyłem prosty sequencer oparty na Arduino, żeby dało się zagrać jakąś melodyjkę. Efekt widać na filmiku. Jako że ten oscylator to nie jest VCO, żeby kontrolować go sequencerem, musiałem wykorzystać diodę i fotorezystor, który zastąpił normalnie regulujący ton potencjometr.
           </p>
         </div>
         <div class="col col-6 col-lg-2">
@@ -118,13 +120,13 @@
       <div class="row">
         <div class="col col-12 col-lg-8">
           <p>
-            Pierwszym modułem, który miał znaleźć się na ostatecznym Modularze był sequencer. Konstruckja ta też była inspirowana  <a href="https://www.youtube.com/watch?v=9oGlCfwCoCw">projektem LMNC</a>, jednak uprościłem oryginalny projekt, jako że nie potrzebowałem wszystkich jego funkcji.
+            Pierwszym modułem, który miał znaleźć się na ostatecznym Modularze był sequencer. Konstrukcja ta też była inspirowana  <a href="https://www.youtube.com/watch?v=9oGlCfwCoCw">projektem LMNC</a>, jednak uprościłem oryginalny projekt, jako że nie potrzebowałem wszystkich jego funkcji.
           </p>
           <p>
-            8 potencometrów zadaje wartości napięcia wyjściowego każedgo z 8 kroków sekwencji, a Arduino przełącza kolejno między nimi. Za pomocą przełącznika trybów (w prawym górnym rogu panelu) można zmieniać kierunek kroków i zatrzymywać ich zmianę. Pozostałe pozycje przełącznika na razie nie są wykożystane. Enkoder w lewym górnym rogu pozwala ręcznie zmieniać kroki, a jego wciśnięcie chwiowo zatrzymuje sekwencję. Na dole znajduje się pokrętło szybkości zegara jak i opcjonalne wejście do synchronizacji z sygnałem zewnętrznym.
+            8 potencjometrów zadaje wartości napięcia wyjściowego każdego z 8 kroków sekwencji, a Arduino przełącza kolejno między nimi. Za pomocą przełącznika trybów (w prawym górnym rogu panelu) można zmieniać kierunek kroków i zatrzymywać ich zmianę. Pozostałe pozycje przełącznika na razie nie są wykorzystane. Enkoder w lewym górnym rogu pozwala ręcznie zmieniać kroki, a jego wciśnięcie chwilowo zatrzymuje sekwencję. Na dole znajduje się pokrętło szybkości zegara jak i opcjonalne wejście do synchronizacji z sygnałem zewnętrznym.
           </p>
           <p>
-            Dla tego modułu pierwszy raz robiłem panel. Opiszę tutaj ten proces, jako że dla wszystkich kolejnych modułów był on zasadniczo taki sam. Najpierw rozkład elementów na panelu jak i szkic opisów zrobiłem na kartce (w pełnej skali). Następnie wszystkie opisy (dotychczas ołówkiem, bez grubości) pogrubiłem markerem, aby nadać liniom stałą szerokość. Później nakleiłem taśmą dwustronną tą kartkę na płytę spienionego PCV i wyciąłem kształt modułu. Opisy wyciąłem nożem w papierze po zewnętrznym obrysie markera, by odsłonic plastik. Następnie wywierciłem wszystkie otwory na potencjometry i złącza. Na całosć naniosłem 3 warstwy sprayu: biały podkład, czarny matowy i srebrny. Podkład zapewnia dobrą przyczepność farby a czarny (powinien byc błeszczący najlepiej) sprawia że srebrny na nim bardziej błyszczy. Później można zdjać papier i zacząć montować potencjometry. Późniejsze moduły od tyłu dodatkowo usztywniałem, ale ten akurat jest na tyle szeroki, że plastik się nie wygina. 
+            Dla tego modułu pierwszy raz robiłem panel. Opiszę tutaj ten proces, jako że dla wszystkich kolejnych modułów był on zasadniczo taki sam. Najpierw rozkład elementów na panelu jak i szkic opisów zrobiłem na kartce (w pełnej skali). Następnie wszystkie opisy (dotychczas ołówkiem, bez grubości) pogrubiłem markerem, aby nadać liniom stałą szerokość. Później nakleiłem taśmą dwustronną tą kartkę na płytę spienionego PCV i wyciąłem kształt modułu. Opisy wyciąłem nożem w papierze po zewnętrznym obrysie markera, by odsłonić plastik. Następnie wywierciłem wszystkie otwory na potencjometry i złącza. Na całość naniosłem 3 warstwy sprayu: biały podkład, czarny matowy i srebrny. Podkład zapewnia dobrą przyczepność farby a czarny (powinien być błyszczący najlepiej) sprawia że srebrny na nim bardziej błyszczy. Później można zdjąć papier i zacząć montować potencjometry. Późniejsze moduły od tyłu dodatkowo usztywniałem, ale ten akurat jest na tyle szeroki, że plastik się nie wygina. 
           </p>
         </div>
         <div class="col col-6 col-lg-2">
@@ -154,7 +156,7 @@
             Zaraz po ukończeniu sequencera zabrałem się za układ, który był niezbędny do dalszej pracy, czyli zasilacz dualny. Jest wiele sposobów na budowę tego typu układów, ja zdecydowałem się na taki, który bazuje na stabilnym zasilaniu DC z którego generuje parę napięć +12V, -12V. Oszczędziło mi to operowania na 230V oraz wysoce prawdopodobnej śmierci. 
           </p>
           <p>
-            Głównym wyzwaniem przy projektowaniu dualnego zasilacza jest jego ujemna część, jako że dodatnie napięcie można uzyskać z dowolnego regulatora zakupionego w sklepie. Miałem takie niebieskie płytki oparte o regulator LM2596 (które regulowały dodatnie napięcie) i to ich planowałem użyć do dodatniej strony zasilacza. Ujemne napięcie chciałem uzyskać z tego samego chipa, tylko z inną płytką go otaczającą. Początkowo, planowałem stworzyć układ otaczający ten regulator samemu, w oparciu o schemat zapewniony przez producenta samego chipa, jednak coś mi nie działało (dalej nie wiem co). Wtedy zauważyłem, że podpinając "bokiem" niebieską płytkę (zwykłą dodatnią), uzyskuje się identyczny układ do tego, który próbowałem zbudować i powstaje ujemne napięcie. Schemat umieściłem na zdięciu obok. 
+            Głównym wyzwaniem przy projektowaniu dualnego zasilacza jest jego ujemna część, jako że dodatnie napięcie można uzyskać z dowolnego regulatora zakupionego w sklepie. Miałem takie niebieskie płytki oparte o regulator LM2596 (które regulowały dodatnie napięcie) i to ich planowałem użyć do dodatniej strony zasilacza. Ujemne napięcie chciałem uzyskać z tego samego chipa, tylko z inną płytką go otaczającą. Początkowo, planowałem stworzyć układ otaczający ten regulator samemu, w oparciu o schemat zapewniony przez producenta samego chipa, jednak coś mi nie działało (dalej nie wiem co). Wtedy zauważyłem, że podpinając "bokiem" niebieską płytkę (zwykłą dodatnią), uzyskuje się identyczny układ do tego, który próbowałem zbudować i powstaje ujemne napięcie. Schemat umieściłem na zdjęciu obok. 
           </p>
         </div>
         <div class="col col-12 col-lg-4">
@@ -171,13 +173,13 @@
       <div class="row">
         <div class="col col-12 col-lg-8">
           <p>
-            VCO jest kluczowym elementem każdego syntezatora. Pozwala generować falę o zadanej częstotliwości, która następnie może być przetważana przez pozostałe moduły urządzenia. Wybrany przeze mnie rodzaj oscylatora może generować falę piłokrztałtną lub prostokątną zależnie od ustawienia. Budowa tego układu była moim pierwszym większym spotkaniem z elektroniką analogową jak i lutowaniem obwodów na płytkach stripboard. Układu nie wymyśliłem samemu, a praktycznie bez zmian wykorzystałem świetny <a href="https://www.youtube.com/watch?v=OCAb2UoSPs0">projekt VCO Moritza Kleina</a>.
+            VCO jest kluczowym elementem każdego syntezatora. Pozwala generować falę o zadanej częstotliwości, która następnie może być przetwarzana przez pozostałe moduły urządzenia. Wybrany przeze mnie rodzaj oscylatora może generować falę piłokształtną lub prostokątną zależnie od ustawienia. Budowa tego układu była moim pierwszym większym spotkaniem z elektroniką analogową jak i lutowaniem obwodów na płytkach stripboard. Układu nie wymyśliłem samemu, a praktycznie bez zmian wykorzystałem świetny <a href="https://www.youtube.com/watch?v=OCAb2UoSPs0">projekt VCO Moritza Kleina</a>.
           </p>
           <p>
-            Układ jest oparty na przerzutniku Schmitta, który stanowi bazę oscylatora astabilnego. Nie będę się tutaj zagłębiał w szczegóły, bo Moritz Klein tłumaczy działanie całego układu o wiele lepiej niż ja bym umiał. Wprowadziłem do układu drobne zmiany wynikające z komponentów jakie miałem, plus uznałem, że nie potrzebuję wejścia PWM, więc je też pominąłem. Schemat obok jest już zmodyfikowanym przeze mnie układem. Na płytce stripboard umieściłem 2 identyczne układy. Layout jest całkowicie mój, jako że chciałem go dobrze rozumieć żeby wykryć ewentualne błędy. Tak samo postępowałem w kolejnych modułach - nawet jeżeli wykożystywałem czyiś schemat, rozkład na płytce robiłem samemu. 
+            Układ jest oparty na przerzutniku Schmitta, który stanowi bazę oscylatora astabilnego. Nie będę się tutaj zagłębiał w szczegóły, bo Moritz Klein tłumaczy działanie całego układu o wiele lepiej niż ja bym umiał. Wprowadziłem do układu drobne zmiany wynikające z komponentów jakie miałem, plus uznałem, że nie potrzebuję wejścia PWM, więc je też pominąłem. Schemat obok jest już zmodyfikowanym przeze mnie układem. Na płytce stripboard umieściłem 2 identyczne układy. Layout jest całkowicie mój, jako że chciałem go dobrze rozumieć żeby wykryć ewentualne błędy. Tak samo postępowałem w kolejnych modułach - nawet jeżeli wykorzystywałem czyiś schemat, rozkład na płytce robiłem samemu. 
           </p>
           <p>
-            Brzmienie modułu można usłyszeć na filmiku przy sequencerze (jak i wszystkich późniejszych). Oscylator gra super, po wyregulowaniu potencjometrów strojących V/oct, trzyma strój stosunkowo dobrze i można na nim grać keyboardem. Problematyczne były tylko potencjometry na panelu. Te których używałem na początku (widać je na zdjęciach) w losowych momentach zaczynały się psuć - ich piny zaczynały się rozłączać co powodowało skoki i zmiany napięcia zadającego ton oscylatora. Jest to problem ze wszytkimi tego typu potencjometrami (z metalową obudową) i ostatecznie stopniowo musiałem je wymieniać na inne (takie zielone - są widoczne w późniejszych modułach).
+            Brzmienie modułu można usłyszeć na filmiku przy sequencerze (jak i wszystkich późniejszych). Oscylator gra super, po wyregulowaniu potencjometrów strojących V/oct, trzyma strój stosunkowo dobrze i można na nim grać keyboardem. Niestety obowiązuje to tylko na przestrzeni 2 oktaw (max 3), bo dalej pojawiają się nieliniowości (nuty rozjeżdżają się nawet o cały ton). Bardziej problematyczne były tylko potencjometry na panelu. Te których używałem na początku (widać je na zdjęciach) w losowych momentach zaczynały się psuć - ich piny zaczynały się rozłączać co powodowało skoki i zmiany napięcia zadającego ton oscylatora. Jest to problem ze wszystkimi tego typu potencjometrami (z metalową obudową) i ostatecznie stopniowo musiałem je wymieniać na inne (takie zielone - są widoczne w późniejszych modułach).
           </p>
         </div>
         <div class="col col-6 col-lg-2">
@@ -199,7 +201,7 @@
       <div class="row">
         <div class="col col-12 col-lg-8">
           <p>
-            Filtr jest najprostszym sposobem na przetwarzanie dźwięku w syntezatorze. Najczęsciej wykożystywany jest filtr dolnoprzepustowy, który wygładza dźwięk wychodzący z oscylatora obcinając wysokie częstotliwości. Filtr który tutaj zaimplementowałem pierwotnie pochodzi z ikonicznego syntezatora Korg MS20 i jest bardzo popularną konstrukcją. Ma on funkcję filtra górnoprzepustowego, dolnoprzepustowego a także kontrolę rezonansu, która pozwala uzyskać interesujące tony. Konkretna wersja układu którą wykożystałem pochodzi od <a href="https://www.schmitzbits.de/ms20.html">Réne Schmitz'a</a>, który wprowadził parę zmian unowocześniających ikoniczny filtr.
+            Filtr jest najprostszym sposobem na przetwarzanie dźwięku w syntezatorze. Najczęściej wykorzystywany jest filtr dolnoprzepustowy, który wygładza dźwięk wychodzący z oscylatora obcinając wysokie częstotliwości. Filtr który tutaj zaimplementowałem pierwotnie pochodzi z ikonicznego syntezatora Korg MS20 i jest bardzo popularną konstrukcją. Ma on funkcję filtra górnoprzepustowego, dolnoprzepustowego a także kontrolę rezonansu, która pozwala uzyskać interesujące tony. Konkretna wersja układu którą wykorzystałem pochodzi od <a href="https://www.schmitzbits.de/ms20.html">Réne Schmitz'a</a>, który wprowadził parę zmian unowocześniających ikoniczny filtr.
           </p>
         </div>
         <div class="col col-6 col-lg-2">
@@ -224,7 +226,7 @@
       <div class="row">
         <div class="col col-12 col-lg-8">
           <p>
-            Obudowę syntezatora zrobiłem w zasadzie ze śmieci. Było to dosyć celowe - chciałem żeby całość miała garażowy, niedoskonały wygląd. Konstrukcja powstała z pociętego blatu starego stołu od babci, a tył jest górną okleiną ikonicznego stołu Ikea LACK (został znaleziony na śmietniku). Całosć została pomalowana czarnym matowym sprayem. Moduły są przykręcane do obudowy śrubami do drewna, wkręcanymi bezpośrednio w przednie deseczki. Obudowa dodatkowo wyposażona jest w świecący wyłącznik i gniazdo DC 5.5x2.1mm.
+            Obudowę syntezatora zrobiłem w zasadzie ze śmieci. Było to dosyć celowe - chciałem żeby całość miała garażowy, niedoskonały wygląd. Konstrukcja powstała z pociętego blatu starego stołu od babci, a tył jest górną okleiną ikonicznego stołu Ikea LACK (został znaleziony na śmietniku). Całość została pomalowana czarnym matowym sprayem. Moduły są przykręcane do obudowy śrubami do drewna, wkręcanymi bezpośrednio w przednie deseczki. Obudowa dodatkowo wyposażona jest w świecący wyłącznik i gniazdo DC 5.5x2.1mm.
           </p>
           <p>
             Wymiary wewnętrzne obudowy to 45.5cm x 40.7cm x 9.4cm, co pozwala umieścić w niej 2 rzędy dwa rzędy modułów, 7 x 5cm segment w każdym.
@@ -262,15 +264,18 @@
           </p>
 
           <p>
-            Jest to pierwszy z modułow, który został w znacznej części zaprojektowany przeze mnie. Jako VCA wykorzystałem układ <a href="https://electricdruid.net/design-a-eurorack-vintage-vca-with-the-lm13700/">Electricdruida</a>, który przerobiłem żeby pasował do reszty. Resztą jest prosty mixer inspirowany <a href="https://www.lookmumnocomputer.com/mixer">mixerem LMNC</a> i tuner oparty na Arduino Nano, inspirowany <a href="https://www.lookmumnocomputer.com/1222-performance-vco">Performance VCO od LMNC</a>.
+            Jest to pierwszy z modułów, który został w znacznej części zaprojektowany przeze mnie. Jako VCA wykorzystałem układ <a href="https://electricdruid.net/design-a-eurorack-vintage-vca-with-the-lm13700/">Electricdruida</a>, który przerobiłem żeby pasował do reszty. Resztą jest prosty mixer inspirowany <a href="https://www.lookmumnocomputer.com/mixer">mixerem LMNC</a> i tuner oparty na Arduino Nano, inspirowany <a href="https://www.lookmumnocomputer.com/1222-performance-vco">Performance VCO od LMNC</a>.
           </p>
           <p>
-            Najbardziej interesującym elmentem modułu moim zdaniem jest tuner. LMNC swój umieścił w VCO, jednak ja nie chciałem tego robić, ponieważ jeżeli rozszerzałbym syntezator o więcej oscylatorów, nie potrzebowałbym tunera przy każdym. Mimo że czasem jest to przydatna funkcja, wymaga to dużej ilości dodatkowej elektroniki. Postanowiłem więc umieścić tuner w mixerze - dzięki temu można nastroić każdy oscylator, wyciszając na chwilę wszystkie pozostałe. Jako że filtry ani wzmacniacze nie zmieniają bazowej częstotliwości, można stroić nawet oscylator z efektami. <br>
+            Najbardziej interesującym elementem modułu moim zdaniem jest tuner. LMNC swój umieścił w VCO, jednak ja nie chciałem tego robić, ponieważ jeżeli rozszerzałbym syntezator o więcej oscylatorów, nie potrzebowałbym tunera przy każdym. Mimo że czasem jest to przydatna funkcja, wymaga to dużej ilości dodatkowej elektroniki. Postanowiłem więc umieścić tuner w mixerze - dzięki temu można nastroić każdy oscylator, wyciszając na chwilę wszystkie pozostałe. Jako że filtry ani wzmacniacze nie zmieniają bazowej częstotliwości, można stroić nawet oscylator z efektami. <br>
             Arduino mierzy częstotliwość sygnału i porównuje go z tabelą wszystkich częstotliwości nut. Na tej podstawie wyświetla informacje na wyświetlaczu i diodach. Kod Arduino to tunera znajduje się <a href="https://github.com/Szymon300101/TUN3R">tutaj</a>. <br>
-            Jeśli chodzi o podłączenie Arduino do wyświetlacza, to tak się składa że da się to tak przylutować, żeby były one po przeciwnych stronach płytki i stykały się pinami. Ucinając niektóre piny, do się sprytnie uniknąć ciągnięcia dużej ilości kabli. Niestety Arduino, którego uzywałem miało spalone parę pinów, więc musiałem trochę pokombinować żeby je zastąpić i w efekcie jest trochę nieładnych przewodów.
+            Jeśli chodzi o podłączenie Arduino do wyświetlacza, to tak się składa że da się to tak przylutować, żeby były one po przeciwnych stronach płytki i stykały się pinami. Ucinając niektóre piny, do się sprytnie uniknąć ciągnięcia dużej ilości kabli. Niestety Arduino, którego używałem miało spalone parę pinów, więc musiałem trochę pokombinować żeby je zastąpić i w efekcie jest trochę nieładnych przewodów.
           </p>
           <p>
-            Jak można zauważyć na zdjęcu, moduł nie jest całkiem skończony. Brakuje gniazda jack w pierwszym kanale, bo kiedy go budowałem skończyły mi się. Od tego czasu nigdy nie miałem potrzeby korzystać z 4 kanałów na raz, więc ciągle go nie zainstalowałem. cała reszta tego kanału jest, brakuje tylko gniazda. Planowałem też dodać przycisk do tunera (do zmiany trybów czy coś), ale nie miałem na razie potrzeby, więc została dziura pod wyświetlaczem.
+            Dolny VCA ma nieco zmieniony układ potencjometru. Zamiast GND przy dolnej nóżce, ma -12V przylutowane przez serię rezystorów (10K + 5.1K + 3.3K). Dzięki temu dzielnik na nim oparty schodzi nieco na ujemne napięcia (ok. -0.5V). Pozwala to skorygować nie całkiem domykającą się bramkę mojego ADSRa. Lepiej by było rozwiązać po stronie envelope'a, ale tak jest wiele łatwiej. 
+          </p>
+          <p>
+            Jak można zauważyć na zdjęciu, moduł nie jest całkiem skończony. Brakuje gniazda jack w pierwszym kanale, bo kiedy go budowałem skończyły mi się. Od tego czasu nigdy nie miałem potrzeby korzystać z 4 kanałów na raz, więc ciągle go nie zainstalowałem. cała reszta tego kanału jest, brakuje tylko gniazda. Planowałem też dodać przycisk do tunera (do zmiany trybów czy coś), ale nie miałem na razie potrzeby, więc została dziura pod wyświetlaczem.
           </p>
         </div>
         <div class="col col-6 col-lg-2">
@@ -283,6 +288,74 @@
           <img src="../../assets/blog/modular/IMG_20220212_124620.jpg" class="vertical">
           <img src="../../assets/blog/modular/IMG_20230226_165628.jpg" class="horizontal">
           <img src="../../assets/blog/modular/IMG_20230226_165731.jpg" class="horizontal">
+        </div>
+      </div>
+
+
+      <h3>ADSR (generator obwiedni)
+        <span class="date">09.2022</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Moduł ADSR (Atack-Decay-Sustain-Release) pozwala na kontrolowanie czasu trwania, głośności i charakteru dźwięku. Pozwala on na ustalenie, jak szybko sygnał dźwiękowy nabiera na głośności (faza ataku), jak długo trwa utrzymanie stałej głośności (faza utrzymania), jak szybko dźwięk wygasa (faza wygasania)<br>
+            Dzięki generatorowi obwiedni można kontrolować dynamikę dźwięku, co pozwala na tworzenie bardziej złożonych i interesujących brzmień.
+          </p>
+          <p>
+            Układ elektryczny tego modułu to <a href="https://www.schmitzbits.de/adsr.html">"Fastest Envelope in the West" Réne Shmitz'a</a>. Był to idealny układ dla mnie, jako że chciałem mieć pełny zakres możliwości ADSR (wiele DIY modułów obwiedni są tylko 'AR'). Przy okazji nauczyłem się nieco jak działa ikoniczny chip 555 (w moim przypadku 7555).
+          </p>
+          <p>
+            Jako że nie miałem potencjometrów 2M2 (ani żadnych porównywalnie dużych) a właśnie nakupiłem dużo 10K, przerobiłem układ pod te właśnie komponenty (według porad autora). <br>
+            Niestety, po tak dużej zmianie wartości komponentów, mam problem z release'm. Kondensator (w moim przypadku bardzo przerośnięty) nie chce się do końca rozładowywać, przez co zawsze po zakończeniu obwiedni mam ~300mV na wyjściu, które dopiero powoli opada (nawet do paru minut). Powodem tego jest dioda, w gałęzi 'release', bo jak napięcie na kondensatorze spadnie poniżej 0.7V przestaje przewodzić i reszta musi uciec inną drogą (nie wiem którędy, ale jakoś to się rozładowuje powoli - dla dużego kondensatora nie wystarczająco szybko). Jest to problem, jeżeli używa się tego modułu do sterowania VCA, bo bramka się nie domyka i syntezator cały czas cicho gra. Bez wielkich potencjometrów (i przelutowywania połowy rezystorów) nie mogę tego naprawić z wewnątrz układu, więc w mixerze na jednym z kanałów dałem możliwość korekcji tego offsetu (opisane w rozdziale o mixerze). Teraz mam taki release dodatkowy tylko, bo nawet przy odpowiedniej gałce skręconej na maxa, jest sekunda cichego buczenia. Ale to już jest do zniesienia. 
+          </p>
+          <p>
+            Jeśli chodzi o wygląd, jest to mój ulubiony moduł. Pierwszy raz też w jego przypadku zastąpiłem plastikową szynę usztywniającą aluminiowym profilem, co jest o wiele sztywniejsze i bardziej eleganckie. Dodatkowo można do niej zamocować płytkę, która w tym module nie zmieściłaby się na płasko. 
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/Schematic_ADSR_2023-03-04.png" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20220912_004822.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20220912_160525.jpg" class="vertical">
+          <img src="../../assets/blog/modular/IMG_20220913_103926.jpg" class="horizontal">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230226_122444.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20220912_120452.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20220913_103916.jpg" class="vertical">
+        </div>
+      </div>
+
+
+      <h3>Interface MIDI + Looper
+        <span class="date">10.2022</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Dosyć szybko po tym jak zbudowałem sequencer, odkryłem że nie będzie on wystarczającym modułem wejściowym (programującym syntezator). Jest on niewygodny i wolny w użyciu, jako że każdy dźwięk trzeba stroić od zera. Zamarzył mi się solidny looper z wejściem z klawiatury. Trochę mi zajęło zanim wymyśliłem jak chciałbym to zrobić (na początku chciałem rozebrać melodykę i zrobić z tego klawiaturę), ale znalazłem właściwe rozwiązanie. Cały looper jest wbudowany w moduł interface'u MIDI i przyjmuje MIDI po USB z dowolnego keyboardu. Projekt jest cały czas nie skończony, na razie moduł tylko przekazuje nuty, nie ma loopera. Ale to tylko kwestia sofrware. 
+          </p>
+          <p>
+            Zacznijmy od MIDI po USB. Jest to wredny temat, bo żeby odbierać je od keyboardu, trzeba być Hostem USB. Nie znalazłem płytki, która by to potrafiła i jednocześnie miała bibliotekę do MIDI. Na szczęście jest shield do Arduino Pro Mini 3.3V, który to obsługuje, więc z niego skorzystałem i po odrobinie kombinacji udało się to uruchomić. Podpinam go do Nano, bo chciałem łatwo móc wgrywać nowe programy, a i tak musiałem to robić na logice 5V z powodu innych peryferii. 
+          </p>
+          <p>
+            Jako że moduł będzie napakowany softowymi funkcjami po brzegi, chciałem dać mu sensowny wyświetlacz. A jako że chciałem zrobić to trochę dziwnie, dałem mu 2 rzędy po 8 NeoPixeli. Dzięki temu można wyświetlać 16 kroków sekwencji z przesuwającym się kursorem. Jeszcze nie wiem czy to w ogóle wykorzystam, czy będę ich tylko używał do sygnalizowania trybów pracy i ustawień. 
+          </p>
+          <p>
+            Wyjścia modułu są też jeszcze work in progress. Na razie mam wyprowadzony jeden przetwornik DAC i jedną bramkę, co pozwala grać oscylatorami. Pozostałe wyjścia (A-D) pozostawiłem na przyszłe zastosowania. Planuję dołożyć jeszcze jeden DAC, żeby móc grać dwie ścieżki na raz. Reszta możliwe że pójdzie na triggerowane modułu perkusyjnego, który kiedyś chcę dobudować. Ale jeszcze nie wiem jak będzie to wyglądało.
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230225_200637.jpg" class="horizontal">
+          <img src="../../assets/blog/modular/IMG_20230305_123953.jpg" class="horizontal">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/modular/IMG_20230305_123920.jpg" class="horizontal">
+          <div class="video-wrapper">
+            <div class="video-frame"><iframe width="533" height="947" src="https://www.youtube.com/embed/M0FGh9tNE40" title="Modular - MIDI Interface" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
 

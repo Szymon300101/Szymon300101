@@ -73,20 +73,29 @@ body{
 	}
 }
 
-#table-of-contents{
-	text-align: left;
-	list-style: decimal inside;
+#toc-wrapper{
+	text-align: center;
+	margin: 20px;
 
+	#table-of-contents{
+		text-align: center;
+		list-style: decimal inside;
+		display: inline-block;
+		border-top: 1px solid @text_color;
+		border-bottom: 1px solid @text_color;
+		padding: 8px;
 
-	&:before{
-		content: "Spis treści:";
-	}
+		&:before{
+			content: "Spis treści:";
+		}
 
-	a{
-		display: list-item;
-		text-align: left;
+		a{
+			display: list-item;
+			text-align: left;
+		}
 	}
 }
+
 
 .text{
 	width: 100%;
@@ -179,7 +188,7 @@ img{
 
 .video-wrapper{
 	width: 100%;
-	max-width: 600px;
+	//max-width: 600px;
 	height: 100%;
 	margin: 0 auto;
 	background: #CCC;
