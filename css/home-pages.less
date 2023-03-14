@@ -10,21 +10,39 @@
 	padding-right: 5vw;
 }
 
-.block-href{
-	display:inline-block;
-	
-	.card {
-	  	background-color: @bg_color_dark;
-	  	color: @text_color;
-	  	border-color: rgba(140, 130, 115, 0.13);
-		margin:8px;
-		text-align: left;
-	    height: 370px;
+.card-gallery{
+}
 
-		p {
-		    font-size: 17px;
-		    line-height: 1.7;
-		    margin-bottom: 20px;
-		}
+.card {
+	vertical-align: top;
+	display:inline-block;
+  	background-color: @bg_color_dark;
+  	color: @text_color;
+  	border-color: rgba(140, 130, 115, 0.13);
+	margin:8px;
+	text-align: left;
+    height: 400px;
+    width: 18rem;
+
+	p {
+	    font-size: 17px;
+	    line-height: 1.7;
+	    height:115px;
+	    margin-bottom: 20px;	
+	}
+
+	.link-div{
+		text-align: center;
+	}
+}
+
+img{
+	&.card-img-wide{
+    	width: 286px;
+		height:161px;
+	}
+	&.card-img-tall{
+    	width: 286px;
+		height:214px;
 	}
 }

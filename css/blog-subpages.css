@@ -59,7 +59,7 @@ body {
   display: block;
 }
 #toc-wrapper {
-  text-align: center;
+  text-align: left;
   margin: 20px;
 }
 #toc-wrapper #table-of-contents {
@@ -102,6 +102,7 @@ body {
   padding-top: 40px;
   padding-bottom: 20px;
   position: relative;
+  text-align: left;
 }
 .text h3:before {
   content: counter(heading) ". ";
