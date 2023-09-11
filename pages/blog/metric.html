@@ -89,13 +89,13 @@
       <div class="row">
         <div class="col col-12 col-lg-8">
           <p>
-            Jest wiele prostych sposobów na rozwiązanie problmów z poprzedniego rozdziału, ale ja wybrałem dziwniejszy. Zrobiłem to też trochę przewidując inne problemy jakie by na pewno się pojawiły później. Postanowiłem zastosować pewien egzotyczny czujnik, będący zasadniczo jednowymiarową matrycą, składającą się z rzędu 128 fotodiód upakowanych blisko siebie. 
+            Jest wiele prostych sposobów na rozwiązanie problemów z poprzedniego rozdziału, ale ja wybrałem dziwniejszy. Zrobiłem to też trochę przewidując inne problemy jakie by na pewno się pojawiły później. Postanowiłem zastosować pewien egzotyczny czujnik, będący zasadniczo jednowymiarową matrycą, składającą się z rzędu 128 fotodiód upakowanych blisko siebie. 
           </p>
           <p>
             Zastąpił on czujnik z poprzedniej wersji, ale reszta pozostała taka sama. Rozwiązanie pozwala przerzucić pomiar grubości zasadniczo do software'u. Głównym ograniczeniem tutaj była rozdzielczość matrycy. Odległość między kolejnymi fotodiodami wynosiła ok. 0.1mm, co w teorii pozwala na założoną dokładność, ale nie uwzględnia innych błędów. Biorąc pod uwagę drgania, ruch filamentu i inne czynniki, nie było możliwości uzyskania zamierzonej niepewności pomiaru.
           </p>
           <p>
-            Jako że czujnik był dostępny tylko w wersji smd, musiałem zaprojektować płytkę. Mimo że była to moja pierwsza płytka, jakimś sposobem nie popełniłem żadnego błędu i wszystko działa jak należy. Wyszła mi na tyle dobrze, że dalej służy ona w ostatecznej wersji urządzenia. Co prawda płytka nie jest skomplikowana, wręcz jest bardzo prosta i mało upakowana, jednak jestem z niej bardzo zadowolony, jako że działała za pierwszym razem. Zrobiłem ją w EasyEDA i zamówiłem na JLCPCB. Znajduje się na niej:
+            Jako że czujnik był dostępny tylko w wersji smd, musiałem zaprojektować płytkę. Wyszła mi na tyle dobrze, że dalej służy ona w ostatecznej wersji urządzenia. Co prawda płytka nie jest skomplikowana, wręcz jest bardzo prosta i mało upakowana, jednak jestem z niej bardzo zadowolony, jako że zadziałała za pierwszym razem. Zrobiłem ją w EasyEDA i zamówiłem na JLCPCB. Znajduje się na niej:
             <ul>
               <li>Arduino Nano</li>
               <li>Czujnik liniowy</li>
@@ -108,15 +108,52 @@
               <li>dodatkowo wyprowadzone piny (H2) z czujnika liniowego na wypadek jakby coś było źle zrobione na płytce (służyłaby wtedy po prostu za adapter)</li>
             </ul>
           </p>
+          <p>
+            Całe to przedsięwzięcie nie przyniosło jednak oczekiwanych wyników. Przede wszystkim, nie udało mi się kontrolować do końca tego, jak filament szedł przez sensor, a jego mniejsza lub większa odległość od czujnika fałszowała pomiary. Ogólnie zniechęcony średnimi wynikami porzuciłem projekt na prawie 2 lata.
+          </p>
         </div>
         <div class="col col-6 col-lg-2">
           <img src="../../assets/blog/metric/IMG_20200402_193559.jpg" class="horizontal">
           <img src="../../assets/blog/metric/IMG_20200327_173118.jpg" class="horizontal">
-          <img src="../../assets/blog/metric/pcb.png" class="horizontal">
+          <img src="../../assets/blog/metric/pcb.PNG" class="horizontal">
         </div>
         <div class="col col-6 col-lg-2">
           <img src="../../assets/blog/metric/IMG_20200422_205851.jpg" class="vertical">
           <img src="../../assets/blog/metric/IMG_20200422_210338.jpg" class="horizontal">
+        </div>
+      </div>
+
+      <h3>Wersja 2
+        <span class="date">01.2022</span>
+      </h3>
+
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Do powrotu do projektu skłoniło mnie to, że kupiłem sobie drukarkę 3D. Dzięki temu mogłem wiele szybciej prototypować kolejne wersje urządzenia i w przyjemniejszy sposób dojść do czegoś co działało. Wymyśliłem więc całkowicie nową wersję czujnika, opierajacą się o optomechaniczne wzmocnienie sygnału. Jest to może trochę przekombinowane, ale było pierwszą od lat szansą na przełamanie problemów, które prześladowały ten projekt. Oto jak to działa: 
+          </p>
+          <p>
+            Filament jest prowadzony przez "wózek" składający się z dwóch łożysk umieszczonych na ramionach, z których jedno jest statyczne. Ramiona zaciskają się na filamencie dzięki sprężynie, przez co łożyska jadą po nim. Na ruchomym ramieniu umieszczone jest lusterko. Laser umieszczony w pewnej odległości od wózka jest skierowany na to lusterko. Jego promień po odbiciu trafia na matrycę (opisaną w poprzednim rozdziale), gdzie rejestrowane jest jego położenie. Jako, że lusterko jest przymocowane do ruchomego ramienia, wychylenie promienia jest proporcjonalne do grubości filamentu przechodzącego między łożyskami wózka.
+          </p>
+          <p>
+            Istotnym aspektem tej wersji jest zerowanie. Żeby promień lasera trafił w czujnik, lusterko musi być poprawnie ustawione. Wymaga to zerowania w dwóch osiach. Jedna oś jest obsługiwana przez pochylanie całej obudowy wózka względem podstawy. Druga, jest regulowna za pomocą odchylania statycznego ramienia śrubą, która znajduje się z tyłu obudowy. Oznacza to też, że każdy pomiar grubości żyłki jest pomiarem względnym, który zależy od wcześniejszej kalibracji dla filamentu znanej średnicy. 
+          </p>
+          <p>
+            Pierwsze wersje mechanizmu były pomarańczowe, a ostateczna wersja jest szara. W ostatecznej wersji, system optomechaniczny zapewnia około 10x wzmocnienie sygnału filament -> sensor. Cały czas głównym problemem dla dokładności pomiaru są zakłócenia. Jest jeszcze parę rzeczy któ©e mogę poprawić, jednak szum wywoływany przez samo przeciąganie filamentu powoduje znaczące zakłucenia. Mimo ich, wartości mierzone mieszczą się jednak w zamierzonej dokładności. 
+          </p>
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/metric/Dioda laserowa.png" class="horizontal">
+          <img src="../../assets/blog/metric/IMG_20220104_002813.jpg" class="vertical">
+          <img src="../../assets/blog/metric/IMG_20220104_204915.jpg" class="vertical">
+          <img src="../../assets/blog/metric/IMG_20230224_125732.jpg" class="vertical">
+        </div>
+        <div class="col col-6 col-lg-2">
+          <img src="../../assets/blog/metric/373347385_985797829299675_6021953698376171571_n.png" class="horizontal">
+          <img src="../../assets/blog/metric/IMG_20220104_204726.jpg" class="vertical">
+          <img src="../../assets/blog/metric/IMG_20220106_111625.jpg" class="vertical">
+          <img src="../../assets/blog/metric/icon.jpg" class="vertical">
         </div>
       </div>
   
