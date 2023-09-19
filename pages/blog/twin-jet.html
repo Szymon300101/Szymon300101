@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Szymon Nowacki | Twin-Jet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog-subpages.css" />
+  </head>
+  <body>
+
+    <div class="navbar row" id="navbar">
+      <div class="col-md left">
+        <a href="../blog_home.html"><i class="bi bi-chevron-double-left"></i> Powrót</a>
+      </div>
+      <div class="col-md left hidden" id="up-arrow">
+        <a href="#"><i class="bi bi-chevron-double-up"></i> Na górę</a>
+      </div>
+      <div class="col-md right">
+        <h2>TWIN-JET</h1>
+      </div>
+    </div>
+
+    <div id="zoom-bg" class="hidden">
+      <i class="bi bi-x-lg zoom-x"></i>
+    </div>
+
+    <div class="text">
+
+      <h1 class="title">TWIN-JET</h1>
+      <span class="subtitle">Motorówka RC napędzana turbinami strumieniowymi</span>
+
+      <img src="../../assets/blog/metric/IMG_6444r.jpg" class="horizontal big">
+
+      <br>
+
+      <p>
+        <b>Co to jest i dlaczego?</b><br>
+        W 2019 podszedł do mnie znajomy, który zajmował się robieniem swoich własnych filamentów do drukarek (jako projekt badawczy na uczelni). Potrzebował urządzenia do pomiaru, jak dobrze mu te filamenty wychodzą jeśli chodzi o jednostajną grubość. Uznałem że nie powinno to być trudne i zgodziłem się spróbować mu coś takiego zmontować. Wtedy jeszcze nie wiedziałem, że zrealizowanie tego zadania zajmie mi ponad 4 lata.
+      </p>
+      <p>
+        <b>Założenia projektowe:</b>
+        <ul>
+          <li>Filament jest przeciągany przez urządzenie, które na podstawie pomiarów tworzy wykres jego średnicy</li>
+          <li>Niepewność pomiaru w okolicach 0.1mm (jest to sprawa niejednoznaczna, ale o tym później)</li>
+          <li>Obsługa filamentów 1.75mm (mniej więcej, filamenty DIY się bardzo wachają, o tym też później)</li>
+          <li>Możliwość zapisu danych prosto na komputer lub na kartę sd</li>
+          <li>Niski koszt</li>
+          <li>Prosta i intuicyjna obsługa</li>
+        </ul>
+      </p>
+
+      <p>
+        <b>Co w tym trudnego?</b>
+        Podobne urządzenia są wykożystywane w przemyśle i mają bardzo dobrą precyzję. Nie udało mi się jednak znaleźć żadnych komponentów, czy gotowych urządzeń, będących w stanie zapewnić wymaganą precyzję na hobbistycznym rynku. To co mnie głównie ograniczało, to brak możliwości wykonywania precyzyjnych części czy mechanizmów, jako że nie miałem warsztatu czy nawet drukarki 3D. Co było dalej? 
+      </p>
+      
+      <div id="toc-wrapper">
+        <ol id="table-of-contents"></ol>
+      </div>
+
+      <h3>Wersja 1a
+        <span class="date">02.2019</span>
+      </h3>
+
+      <div class="row">
+        <div class="col col-12 col-lg-8">
+          <p>
+            Pierwsza wersja urządzenia miała bardzo prostą zasadę działania. Dioda laserowa oświetla filament, a po jego drugiej stronie znajduje się fotoresystor, który jest zacieniany. Na podstawie ilości światła docierającej do fotorezystora określamy grubość filamentu.
+          </p>
+          <p>
+            Nie działało to za bardzo, bo fotorezystor ani żaden inny sensor który testowałem, nie był czuły na całej swojej powieszchni, przez co nie dało się przełożyć jego odczytu na wielkość cienia na niego padającego.
+          </p>
+        </div>
+        <div class="col col-12 col-lg-4">
+          <img src="../../assets/blog/metric/metric_0_2_laser.png" class="horizontal">
+          <img src="../../assets/blog/metric/metric_0_2_schematic.png" class="horizontal">
+        </div>
+      </div>
+
+      <h3>Wersja 1b
+        <span class="date">01.2020</span>
+      </h3>
+  
+    </div> <!-- /text -->
+
+    
+
+
+
+    <script src="../../js/table-of-contents.js"></script>
+    <script src="../../js/sticky-navbar.js"></script>
+    <script src="../../js/img-zoom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
