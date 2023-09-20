@@ -34,17 +34,16 @@
   border-radius: 0 0 0 10px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 80%;
+  text-align: center;
 }
 .card .status-div.finished {
   background-color: #3c4b53;
-  text-align: center;
 }
 .card .status-div.finished:before {
   content: "Skończony";
 }
 .card .status-div.in-progress {
   background-color: #41615b;
-  text-align: center;
 }
 .card .status-div.in-progress:before {
   content: "W trakcie";
