@@ -125,3 +125,57 @@ body {
   font-size: 2vw;
   color: #c2bfb8;
 }
+#bottom-box .btn-about {
+  background-color: #c2bfb8;
+  color: #181a1b;
+  width: 6vw;
+  font-size: 1vw;
+}
+@media (max-aspect-ratio: 1) {
+  #bottom-box .btn-about {
+    display: none;
+  }
+}
+#bottom-box .credits-div {
+  position: absolute;
+  bottom: 10px;
+  right: 26vw;
+  font-size: 0.8vw;
+  text-align: left;
+}
+#bottom-box .credits-div p {
+  margin-bottom: 5px;
+}
+#about-div {
+  position: absolute;
+  top: 28vh;
+  left: 25vw;
+  width: 50vw;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #282828;
+  background-color: rgba(31, 31, 31, 0.95);
+  color: #c2bfb8;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1vw;
+  text-align: left;
+  text-align: justify;
+  padding: 25px;
+}
+#about-div .profile-img {
+  border-radius: 10px;
+  margin-top: 5px;
+  width: 100%;
+  height: auto;
+}
+#about-div .btn-close {
+  position: absolute;
+  top: -0.5vw;
+  right: -0.5vw;
+  width: 1vw;
+  height: 1vw;
+  font-size: 0.5vw;
+  background-color: #c2bfb8;
+  color: #282828;
+  opacity: 1;
+}
