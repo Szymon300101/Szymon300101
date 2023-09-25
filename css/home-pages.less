@@ -14,6 +14,7 @@
 }
 
 .card {
+	position: relative;
 	vertical-align: top;
 	display:inline-block;
   	background-color: @bg_color_dark;
@@ -33,6 +34,34 @@
 
 	.link-div{
 		text-align: center;
+	}
+
+	.status-div{
+		position: absolute;
+		top:0px;
+		right: 0px;
+		width:80px;
+		height: 22px;
+		border-radius: 0 0 0 10px;
+		font-family: 'Helvetica Neue',Arial,sans-serif;
+		font-size: 80%;
+		text-align:center;
+
+		&.finished{
+			background-color: #3c4b53;
+
+			&:before{
+				content: "Skończony";
+			}
+		}
+
+		&.in-progress{
+			background-color: #41615b;
+
+			&:before{
+				content: "W trakcie";
+			}
+		}
 	}
 }
 

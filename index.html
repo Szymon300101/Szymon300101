@@ -50,10 +50,40 @@
             </a>
           </div>
           <div class="col-md-4 text-col">
-            
+            <div>
+              <button class="btn btn-about" onclick="open_about_box()">O mnie</button>
+            </div>
+            <div class="credits-div">
+              <p><b>Strona internetowa:</b> Szymon Nowacki</p>
+              <p><b>Grafika:</b> Szymon Nowacki</p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+
+    <div id="about-div" class="hidden">
+      <div class="row">
+        <div class="col-sm-4">
+          <img class="profile-img" src="./assets/profile.jpg" alt="Profile picture">
+        </div>
+        <div class="col-sm-8">
+          <p>
+            Jestem studentem Politechniki Śląskiej zainteresowanym różnorodnymi dyscyplinami od programowania po fotografię. 
+          </p>
+          <p>
+            Profesjonalnie zajmowałem się projektowaniem aplikacji webowych i systemów automatyki budynkowej, a aktualnie pracuję przy programowaniu urządzeń wbudowanych.
+          </p>
+          <p>
+            W wolnym czasie głównie zajmuję się wszelkiego rodzaju majsterkowaniem. Buduję zdalnie sterowane modele, instrumenty muzyczne, i inne cyfrowe i analogowe urządzenia elektroniczne. Odlewam z żywicy epoksydowej, drukuję 3D, piszę aplikacje graficzne, ogólnie podejmuję się najróżniejszych projektów, które akurat przyjdą mi do głowy. Poza tym grywam w TTRPG, latam dronami, robię zdjęcia, a kiedy sprzyjają warunki, zajmuję się astrofotografią.
+          </p>
+          <p>
+            Na tej stronie umieszczam wszystko z czego jestem szczególnie zadowolony - fotografię, projekty programistyczne jak i hardware'owe. Umieszczanie tu kolejnych rzeczy jest procesem stopniowym, więc na ten moment (i pewnie jeszcze jakiś czas) nie ma jeszcze wszystkiego, co uważam za godne pojawienia się tutaj.
+          </p>
+        </div>
+      </div>
+      <button class="btn btn-close" onclick="close_about_box()"></button>
     </div>
 
 
@@ -61,5 +91,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="./js/dynamic-bg.js"></script>
     <script src="./js/bottom-panel-anim.js"></script>
+    <script src="./js/about-box.js"></script>
   </body>
 </html>

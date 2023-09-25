@@ -5,6 +5,7 @@
   padding-right: 5vw;
 }
 .card {
+  position: relative;
   vertical-align: top;
   display: inline-block;
   background-color: #181a1b;
@@ -23,6 +24,29 @@
 }
 .card .link-div {
   text-align: center;
+}
+.card .status-div {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 80px;
+  height: 22px;
+  border-radius: 0 0 0 10px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 80%;
+  text-align: center;
+}
+.card .status-div.finished {
+  background-color: #3c4b53;
+}
+.card .status-div.finished:before {
+  content: "Skończony";
+}
+.card .status-div.in-progress {
+  background-color: #41615b;
+}
+.card .status-div.in-progress:before {
+  content: "W trakcie";
 }
 img.card-img-wide {
   width: 286px;
